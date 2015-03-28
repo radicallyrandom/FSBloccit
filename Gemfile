@@ -49,6 +49,8 @@ group :development, :test do
 
   # Add Rails ERD 
   gem 'rails-erd'
+
+
 end
 
 group :production do
