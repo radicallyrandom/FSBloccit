@@ -40,6 +40,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Add Figaro For Environment Variables
+gem 'figaro'
+
 group :development, :test do
 
   # Use Sqlite3 in as the database for active records in development
