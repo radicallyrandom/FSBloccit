@@ -15,6 +15,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Twitter Bootstrap
 gem 'bootstrap-sass'
 
+# Use Devise For Authentication
+gem 'devise'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
