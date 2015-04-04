@@ -41,7 +41,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Add Figaro For Environment Variables
-gem 'figaro'
+gem 'figaro', '1.0'
 
 group :development, :test do
 
