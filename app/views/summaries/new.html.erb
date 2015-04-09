@@ -1,0 +1,20 @@
+<h1>New Summary For <%= @post.title %> </h1>
+
+<div class="row">
+	<div class="col-md-4">
+		<h3>Be Descriptive!</h3>
+		<p><i>Web Crawlers really love this kind of thing</i></p>
+	</div>
+
+	<div class="col-md-4">
+		<%= form_for [@post, @summary] do |f| %>			
+			<div class="form-group">
+				<%= f.label :description %>
+				<%= f.text_area :description, rows: 8, class: 'form-control', placeholder: 'Describe The Post!' %>
+			</div>
+			<div class="form-group">
+				<%= f.submit "Save", class: 'btn btn-success' %>
+			</div>
+		<% end %>
+	</div>
+</div>
