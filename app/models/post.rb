@@ -14,11 +14,11 @@ class Post < ActiveRecord::Base
   default_scope { order('created_at DESC') }
 
 	def markdown_title
-		render_as_markdown(self.title)
+		render_as_markdown(title)
 	end
 
 	def markdown_body
-		render_as_markdown(self.body)
+		render_as_markdown(body)
 	end
 
 	private

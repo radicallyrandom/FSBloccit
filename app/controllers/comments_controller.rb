@@ -1,16 +1,9 @@
 class CommentsController < ApplicationController
 
 	def create
-		@topic = Topic.find_by(params[:topic_id])
-		@post = Post.find_by(params[:post_id])
-		@comment = current_user.comments.build(comment_params)
-		@comment.post = @post
-
-		if @comment.save
-			flash[:notice] = "Comment was saved"	
-		else
-			flash[:error] = "Comment Failed to save. Please try again"
-		end
+		@post = Post.find(params[:post_id])
+		@comment = @post.comments.build(comment_params)
+		@comment.user.id = current_user.id
 	end
 
 	private
