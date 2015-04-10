@@ -37,6 +37,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Use Carrierwave For Image Uploading
+gem 'carrierwave'
+
+# Use MiniMagick for manipulating images
+gem 'mini_magick'
+
+# Use Fog NOT Fog-AWS (initialization error) for storing images in Amazon S3
+gem 'fog'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
