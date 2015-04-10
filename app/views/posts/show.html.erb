@@ -1,4 +1,12 @@
-<h1> <%= @post.markdown_title %> </h1>
+<div class="jumbotron">
+      <div class="container">
+        <h1> <%= @post.markdown_title %> </h1>
+        <small>
+			<%= image_tag(@post.image.regular.url) if @post.image? %>
+		</small>
+      </div>
+    </div>
+
 
 <div class="row">
 	<div class="col-md-8">
@@ -8,6 +16,7 @@
 			<%= @post.user.name %>
 		</small>
 		<p><%= @post.markdown_body %></p>
+		
 	</div>
 	<div class="col-md-4">
 		<% if policy(@post).edit? %>

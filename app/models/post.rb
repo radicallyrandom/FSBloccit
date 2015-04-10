@@ -9,7 +9,9 @@ class Post < ActiveRecord::Base
   validates :topic, presence: true
   validates :user, presence: true
 
-	default_scope { order('created_at DESC') }
+  mount_uploader :image, ImageUploader
+
+  default_scope { order('created_at DESC') }
 
 	def markdown_title
 		render_as_markdown(self.title)
