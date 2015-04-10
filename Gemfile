@@ -15,6 +15,9 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use Twitter Bootstrap
 gem 'bootstrap-sass'
 
+# Add Markdown Processing
+gem 'redcarpet'
+
 # Use Devise For Authentication
 gem 'devise'
 

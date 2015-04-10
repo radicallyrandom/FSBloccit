@@ -10,7 +10,7 @@
 			<div class="media">
 				<div class="media-body">
 					<h4 class="media-headng">
-						<%= link_to post.title, [@topic, post] %>
+						<%= link_to (markdown_to_html post.title), [@topic, post] %>
 					</h4>
 					<small>
 						submitted <%= time_ago_in_words(post.created_at) %> by <%= post.user.name %><br>
@@ -22,7 +22,6 @@
 	</div>
 	<div class="col-md-4">
 		<% if policy(Post.new).create? %>
-		
 			<%= link_to "New Post", new_topic_post_path(@topic), class: 'btn btn-success' %>
 		<% end %>
 	</div>
