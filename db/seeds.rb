@@ -1,7 +1,7 @@
 require 'faker'
 
 # Create Users
-5.times do
+20.times do
 	user = User.new(
 		name: Faker::Name.name,
 		email: Faker::Internet.email,
@@ -41,7 +41,7 @@ posts = Post.all
 # Create Comments
 100.times do
 	Comment.create!(
-		#user: user.sample,
+		user: user.sample,
 		post: posts.sample,
 		body: Faker::Lorem.paragraph
 		)

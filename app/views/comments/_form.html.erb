@@ -1,0 +1,7 @@
+<% if current_user %>
+	<%= form_for [topic, post, post.comments.new] do |f| %>
+		
+		<%= f.text_area :body, class: 'form-control', placeholder: 'Enter a comment'%>
+		<%= f.submit class: 'btn btn-success' %>
+	<% end %> 
+<% end %>

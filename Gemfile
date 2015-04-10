@@ -78,7 +78,12 @@ group :development, :test do
   # Add Rails ERD 
   gem 'rails-erd'
 
+  # Show Better Errors in Development
+  gem "better_errors"
 
+  # Hook Up Bettor Errors
+  gem "binding_of_caller"
+  
 end
 
 group :production do
