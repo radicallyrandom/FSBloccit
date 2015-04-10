@@ -46,6 +46,9 @@ gem 'mini_magick'
 # Use Fog NOT Fog-AWS (initialization error) for storing images in Amazon S3
 gem 'fog'
 
+# Pagination Gem Compatible With Rails 3
+gem 'will_paginate', '~> 3.0.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
