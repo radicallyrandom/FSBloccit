@@ -9,8 +9,8 @@ module ApplicationHelper
 	end
 
 	def markdown(text)
-		md_extension = {fenced_code_blocks: true, , disable_indented_code_blocks: true}
-		md = Redcarpet::Markdown.new(Redcarpet::Render::HTML, md_extension)
-		{ md.render text }.html_safe
+		md_extension = {fenced_code_blocks: true , disable_indented_code_blocks: true}
+		md = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new, md_extension)
+		(md.render text).html_safe
 	end
 end

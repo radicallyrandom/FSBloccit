@@ -19,3 +19,16 @@
     <% end %>
   </div>
 </div>
+
+</br>
+
+<div class="row">
+  <h2>Comments</h2>
+  <div class=col-md-12>
+    <%= render @comments %>
+    
+    <%= render 'comments/form', topic: @topic, post: @post, comment: @comment   %>
+    
+    
+  </div>
+</div>
