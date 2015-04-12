@@ -13,20 +13,5 @@ class Post < ActiveRecord::Base
 
   default_scope { order('created_at DESC') }
 
-	def markdown_title
-		render_as_markdown(title)
-	end
-
-	def markdown_body
-		render_as_markdown(body)
-	end
-
-	private
-
-	def render_as_markdown(text)
-		extensions = { fenced_code_blocks: true, disable_indented_code_blocks: true }
-		markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions)
-		(markdown.render text).html_safe
-	end
 
 end

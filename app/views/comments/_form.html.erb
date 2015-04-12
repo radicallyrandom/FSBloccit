@@ -1,8 +1,0 @@
-<%= form_for [topic, post, comment] do |f| %>
-	<%= form_group_tag(comment.errors[:body]) do %>
-    <%= f.text_field :body, class: 'form-control', placeholder: "Enter new comment" %>      
-  <% end %>	
-  <div class="form-group">
-  	<%= f.submit %>
-  </div>
-<% end %>
